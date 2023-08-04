@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('subscribers', function (Blueprint $table) {
             $table->id('id_sub');
             $table->foreignId('id_author')->constrained(
-                table: 'users',indexName:'id_author'
+                table: 'users',indexName:'id_user'
             );
             $table->foreignId('id_user')->constrained(
                 table: 'users',indexName:'id_user'
