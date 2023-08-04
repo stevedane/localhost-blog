@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('subscribers', function (Blueprint $table) {
             $table->id('id_sub');
-            $table->foreignId('id_author')->constrained(
-                table: 'users',indexName:'id_user'
-            );
-            $table->foreignId('id_user')->constrained(
-                table: 'users',indexName:'id_user'
-            );
+            $table->unsignedBigInteger('id_author');
+            $table->foreign('id_author')->references('id_user')->on('users')->onDelete('cascade');
+
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });

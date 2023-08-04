@@ -13,12 +13,10 @@ return new class extends Migration
     {
         Schema::create('favorites', function (Blueprint $table) {
             $table->id('id_fav');
-            $table->foreignId('id_post')->constrained(
-                table:'posts', indexName:'id_post'
-            );
-            $table->foreignId('id_user')->constrained(
-                table:'users', indexName:'id_user'
-            );
+            $table->unsignedBigInteger('id_post');
+            $table->foreign('id_post')->references('id_post')->on('posts')->onDelete('cascade');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
         });
     }
 

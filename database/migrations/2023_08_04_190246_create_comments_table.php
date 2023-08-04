@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id('id_com');
             $table->text('content');
             $table->date('date');
-            $table->foreignId('id_user')->constrained(table: 'users', indexName:'id_user');
-            $table->foreignId('id_post')->constrained(table: 'posts', indexName:'id_post');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('id_post');
+            $table->foreign('id_post')->references('id_post')->on('posts')->onDelete('cascade');
             $table->timestamps();
         });
     }
