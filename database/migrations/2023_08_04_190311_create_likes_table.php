@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('likes', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_like');
+            $table->foreignid('id_post')->constrained(table: 'posts', indexName: 'id_post');
+            $table->foreignid('id_user')->constrained(table: 'users', indexName: 'id_user');
+            $table->foreignid('id_com')->constrained(table: 'comments', indexName: 'id_com');
             $table->timestamps();
         });
     }
