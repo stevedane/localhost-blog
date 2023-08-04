@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('post_categories', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_post');
+            $table->foreign('id_post')->references('id_post')->on('posts')->onDelete('cascade');
+            $table->unsignedBigInteger('id_cat');
+            $table->foreign('id_cat')->references('id_cat')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

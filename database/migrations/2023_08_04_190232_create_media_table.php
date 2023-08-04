@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('media', function (Blueprint $table) {
-            $table->id();
+            $table->id( 'id_media');
+            $table->foreignId('id_post')->constrained(
+                table: 'posts',indexName:'id_post'
+				);
+            $table->string('name');
+            $table->string('location');
             $table->timestamps();
         });
     }
