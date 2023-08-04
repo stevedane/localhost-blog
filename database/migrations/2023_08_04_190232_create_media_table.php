@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('id_post')->constrained(
                 table: 'posts',indexName:'id_post'
 				);
-            $table->string('id_name');
-            $table->string('id_location');
+            $table->string('name');
+            $table->string('location');
             $table->timestamps();
         });
     }
