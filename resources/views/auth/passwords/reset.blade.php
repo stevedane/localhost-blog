@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest', ['title'=>'Password Reset', 'active'=>''])
 
 @section('content')
 <div class="container">
