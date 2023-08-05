@@ -26,67 +26,67 @@
             </div>
         </div>
         <ul class="nav">
-            <li class="nav-item active ">
+            <li class="nav-item {{$active == 'home' ? 'active' : ''}} ">
                 <a class="nav-link" href="{{route('home')}}">
                     <i class="material-icons">dashboard</i>
                     <p> Dashboard </p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
+            <li class="nav-item {{$active == 'users' ? 'active' : ''}}">
+                <a class="nav-link" href="{{route('users.index')}}">
                     <i class="material-icons">dashboard</i>
                     <p> Users </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{$active == 'categories' ? 'active' : ''}}">
                 <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Categories </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{$active == 'posts' ? 'active' : ''}}">
                 <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Posts </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{$active == 'post_categories' ? 'active' : ''}}">
                 <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Post Categories </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{$active == 'favorites' ? 'active' : ''}}">
                 <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Favorites </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{$active == 'medias' ? 'active' : ''}}">
                 <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Medias </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{$active == 'comments' ? 'active' : ''}}">
                 <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Comments </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{$active == 'subscribers' ? 'active' : ''}}">
                 <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Subscribers </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{$active == 'tags' ? 'active' : ''}}">
                 <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Tags </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{$active == 'likes' ? 'active' : ''}}">
                 <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Likes </p>
