@@ -32,6 +32,66 @@
                     <p> Dashboard </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Users </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Categories </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Posts </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Post Categories </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Favorites </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Medias </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Comments </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Subscribers </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Tags </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Likes </p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
