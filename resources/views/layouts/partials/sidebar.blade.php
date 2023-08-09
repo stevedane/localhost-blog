@@ -20,7 +20,7 @@
             <div class="user-info">
                 <a data-toggle="collapse" href="" class="username">
               <span>
-                {{ Auth::user()->name }}
+                {{ Auth::user() ? Auth::user()->name : 'Inconnu' }}
               </span>
                 </a>
             </div>

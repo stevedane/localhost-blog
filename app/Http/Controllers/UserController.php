@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -22,7 +23,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $user = new User();
+
+        return view('users.create', ['user'=>$user]);
     }
 
     /**
@@ -30,7 +33,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Str::random('4');
+        $user->save();
+
+        return redirect()->route('users.index');
     }
 
     /**
@@ -38,7 +47,9 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $user = User::find($id);
+
+        return view('users.show', ['user'=>$user]);
     }
 
     /**
@@ -46,7 +57,9 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::find($id);
+
+        return view('users.edit', ['user'=>$user]);
     }
 
     /**
@@ -54,7 +67,13 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = User::find($id);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+
+        return redirect()->route('users.show', $id);
     }
 
     /**
@@ -62,6 +81,10 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = User::find($id);
+
+        $user->delete();
+
+        return redirect()->route('users.index');
     }
 }
